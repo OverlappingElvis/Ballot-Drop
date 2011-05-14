@@ -1,0 +1,213 @@
+/*
+       .  .  .+=IZ8OOO7I~~..  .         
+       .:OMMMMMMMMMMMMMMMMMMNI.         
+      .?MMMMMMMMMMMMMMMMMMMMMM8O.   .   
+     .$MMMMMMMMMMMMMMMMMMMMMMMMM8,. .   
+  .=+MMMMMMM$=============?OMMMMMM8.    
+  ,NNMMMM8.,I777777777777II~7MMMMMM??   
+  $MMMMMM:==MMMMMMMMMMMMMMM7 8MMMMMMM,. 
+.:MMMMMM8   ?777777777777I?: ?MMMMMMMI  
+ DMMMMMMO~MMMMMMMMMMMMMMMMMM8=MMMMMMMM:~
+ MMMMMMMO~MMMMMMMMMMMMMMMMMMO=MMMMMMMMII
+=MMMMMMM8=MMMMMMMMMMMMMMMMMMO=MMMMMMMMZ$
+=MMMMMMM8~MMMMMMMMMMMMMMMMMMO=MMMMMMMMOO
++MMMMMMMO .   .          .   =MMMMMMMMO8
+=MMMMMMMO      .        ..   =MMMMMMMMO8
+~MMMMMMMO ~~O? .        ::Z7.=MMMMMMMM77
+ MMMMMMMO ZZMM.         I7MM ~MMMMMMMM??
+ ?MMMMMMO  .. ..       . .   =MMMMMMMO..
+  NMMMMMD7::  7777777777::..I$MMMMMMM=  
+. +MMMMMMM~=..MMMMMMMMMM~=. MMMMMMMOO  .
+   ,.8MMMMMMMMMMMMMMMMMMMMMMMMMMMM?.    
+     .DMMMMMMMMMMMMMMMMMMMMMMMMMM? .    
+    . ,8MMMMMMMMMMMMMMMMMMMMMMNN+       
+    . . INMMMMMMMMMMMMMMMMMMMZ,.        
+      . .    ~IIZ8OOOOO7++,             
+         ..  :?I$88OOOO7+=,             
+*/
+
+html { height: 100%; }
+
+body
+{
+	background: url('bus-bg.jpg') center 192px #4d4d4d no-repeat fixed;
+	font-size: 75%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body>* { min-width: 900px; }
+img { border: none; }
+
+div#map_container
+{
+	width: 75%;
+	height: 530px;
+	position: relative;
+	margin: 20px auto;
+}
+
+div#map_canvas
+{
+	width: 100%;
+	height: 100%;
+}
+
+div#interface
+{
+	width: 75%;
+	height: 40px;
+	position: relative;
+	margin: 0 auto 50px;
+	text-align: left;
+}
+
+div#form
+{
+	float: left;
+	width: 100%;
+	padding-top: 1%;
+}
+
+div#form input
+{
+	height: 8%;
+	font-size: 1.5em;
+}
+
+div#form input#address { width: 60%; }
+div#form input#search { padding: 0.05em 0.5em; }
+.labelHighlight { color: #555; }
+
+div#header
+{
+	width: 75%;
+	position: relative;
+	margin: 0 auto;
+	color: white; 
+}
+
+div#header p span {
+	font-weight: bold;
+	color: #999;
+}
+div#header img { float: left; }
+
+div#header h1
+{
+	color: #fff;
+	text-shadow: 2px 2px 1px #333;
+	font-size: 30px;
+	line-height: 32px;
+	text-transform: uppercase;
+	margin: 0px;
+	font-weight: normal;
+}
+
+div#header p
+{
+	margin: 0px;
+	font-size: 13px;
+}
+
+div#sb-player a, div#header a, span.report
+{
+	color: #FDB913;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #333;
+	cursor: pointer;
+}
+
+div#sb-player a:hover, div#header a:hover, span.report:hover { text-decoration: underline; cursor: pointer;}
+div#explain, div#report-problem { display: none; }
+
+div#sb-body ul li {
+	font-size: 13px;
+	margin-bottom: .5em;
+}
+.votebot div#sb-body
+{
+	background-color: #4d4d4d;
+	color: #fff;
+	text-shadow: 1px 1px 1px #333;
+}
+
+#sb-player { padding: 1em; font-size: 15px; }
+
+.votebot div#sb-wrapper-inner { border: 1px solid #404040; }
+
+#sb-player h1
+{
+	margin-top: 0;
+	color: #FDB913;
+}
+
+span.report, span.done {
+	float: right;
+	font-weight: bold;
+	margin-right: 14px;
+	text-shadow: none;
+}
+
+/* My form can take zip, counties, cities, or addresses, so I removed the zip code, let me know if you 
+still think we need a drop down menu though
+div#form input#zip { width: 75px; }
+
+
+div#interface h1
+{
+	float: left;
+	font-size: 14px;
+	line-height: 16px;
+	color: #FDB913;
+} */
+
+div#interface > * { margin: 5px; }
+
+.clear
+{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix:after
+{
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+div#sb-wrapper  label {
+	float: left;
+	clear: left;
+}
+
+div#sb-wrapper input, div#sb-wrapper textarea {
+	display: block;
+	float: left;
+	font-size: 20px;
+	clear: both;
+	margin: 4px 10px;
+	width: 500px;
+	font-family: Helvetica, Arial, sans-serif;
+} 
+
+div#sb-wrapper textarea {
+	height: 200px;
+}
+
+div#sb-wrapper input[type=submit] {
+	width: auto;
+}
